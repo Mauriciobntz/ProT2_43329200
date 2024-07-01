@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rick And Morty</title>
+    <link rel="stylesheet" href="desafio6.css">
+</head>
+<body>
+    <!--navBar-->
+    <header>
+        <div class="nav-bar">
+            <h1 class="name">Rick and Morty</h1>
+            <nav class="menu">
+                <ul class="items">
+                    <li><a href="#" onclick="mostrarSeccionPersonajes()">Personajes</a></li>
+                    <li><a href="#" onclick="mostrarSeccionFavoritos()">Favoritos</a></li>
+                    <li class="dropdown">
+                        <a>Mas</a>
+                        <div class="dropdown-content">
+                            <a href="#" onclick="mostrarSeccionPersonajesEstado('Alive')">Personajes Vivos</a>
+                            <a href="#" onclick="mostrarSeccionPersonajesEstado('Dead')">Personajes Muertos</a>
+                        </div>
+                    </li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            <br>
+        </div>
+    </header>
+    <!--End navBar-->
+    <!--Seccion de Personajes-->
+    <section id="personajes">
+        <h2 id="title-personajes"></h2>
+        <div id="cards-personajes" class="card-container seccion-back">
+
+        </div>
+    </section>
+
+    <section id="favoritos" style="display: none;">
+        <h2 id="title-favoritos"></h2>
+        <div id="cards-favoritos" class="card-container seccion-back">
+    </section>
+
+    <section id="por-estado" style="display: none;">
+        <h2 id="title-estado"></h2>
+        <div id="cards-personajes-estado" class="card-container seccion-back">
+    </section>
+    <!--Fin Seccion de Personajes-->
+    <section id="contacto" class="container">
+        <footer class="footer-container">
+            <div class="footer-section">
+                <span class="footer-text">&copy; 2024 Company, Inc</span>
+            </div>
+            <ul class="social-icons">
+                <li><a href="https://www.instagram.com/"><img src="img/instagram.png" alt="Instagram" height="30px" width="30px"></a></li>
+                <li><a href="https://www.whatsapp.com/"><img src="img/whatsapp.png" alt="WhatsApp" height="30px" width="30px"></a></li>
+                <li><a href="https://x.com/"><img src="img/twitter.png" alt="Twitter" height="30px" width="30px"></a></li>
+            </ul>
+        </footer>
+    </section>    
+    <!--Footer-->
+    <script src="desafio6.js"></script>
+    <!--End footer-->
+</body>
+</html>

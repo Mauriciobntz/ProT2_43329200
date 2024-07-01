@@ -1,0 +1,235 @@
+/* Estilos base para la barra de navegación */
+.nav-bar {
+    background-color: transparent; /* Fondo transparente */
+    color: #333; /* Color del texto */
+    padding: 10px; /* Espaciado interno */
+    text-align: center; /* Centrar el contenido */
+    box-shadow: 3px 3px 5px #888888;
+}
+
+.nav-bar .name {
+    margin: 0; /* Eliminar margen del título */
+    font-size: 24px; /* Tamaño de fuente del título */
+}
+
+/* Estilos para la lista de menú */
+.menu {
+    display: flex; /* Alinear los elementos de forma horizontal */
+    justify-content: center; /* Centrar los elementos */
+    margin-top: 10px; /* Espacio superior */
+}
+
+.menu .items {
+    list-style-type: none; /* Eliminar viñetas de la lista */
+    margin: 0; /* Eliminar margen */
+    padding: 0; /* Eliminar relleno */
+    display: flex; /* Alinear los elementos de forma horizontal */
+}
+
+.menu .items li {
+    margin-right: 10px; /* Espaciado entre elementos de la lista */
+}
+
+.menu .items li:last-child {
+    margin-right: 0; /* Eliminar margen derecho del último elemento */
+}
+
+.menu .items li a {
+    color: #333; /* Color del texto del enlace */
+    text-decoration: none; /* Eliminar subrayado del enlace */
+    padding: 10px; /* Espaciado interno del enlace */
+    display: block; /* Hacer que los enlaces ocupen todo el espacio disponible */
+    transition: background-color 0.3s ease; /* Transición suave para el color de fondo */
+}
+
+.menu .items li a:hover {
+    background-color: #eee; /* Color de fondo al pasar el mouse */
+}
+
+/* Estilos para el menú desplegable */
+.menu .dropdown {
+    position: relative; /* Ajustar la posición del menú desplegable */
+}
+
+.menu .dropdown-content {
+    display: none; /* Ocultar inicialmente el menú desplegable */
+    position: absolute; /* Posicionamiento absoluto */
+    background-color: #fff; /* Color de fondo del menú desplegable */
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2); /* Sombra */
+    z-index: 1; /* Capa z-index para superponer */
+    width: 160px; /* Ancho del menú desplegable */
+}
+
+.menu .dropdown-content a {
+    color: #333; /* Color del texto del enlace */
+    text-decoration: none; /* Eliminar subrayado del enlace */
+    display: block; /* Hacer que los enlaces ocupen todo el espacio disponible */
+    padding: 10px; /* Espaciado interno del enlace */
+    transition: background-color 0.3s ease; /* Transición suave para el color de fondo */
+}
+
+.menu .dropdown-content a:hover {
+    background-color: #eee; /* Color de fondo al pasar el mouse */
+}
+
+.menu .dropdown:hover .dropdown-content {
+    display: block; /* Mostrar el menú desplegable al pasar el mouse sobre el elemento padre */
+}
+
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    .menu {
+        flex-direction: column; /* Cambiar a disposición vertical */
+    }
+
+    .menu .items li {
+        margin: 5px 0; /* Espaciado entre elementos en dispositivos móviles */
+    }
+
+    .menu .items li a {
+        padding: 8px 15px; /* Ajustar el espaciado interno */
+    }
+
+    .menu .dropdown-content {
+        position: static; /* Posición estática en dispositivos móviles */
+        display: none; /* Ocultar el menú desplegable en dispositivos móviles */
+        background-color: transparent; /* Fondo transparente */
+        box-shadow: none; /* Sin sombra */
+        width: auto; /* Ancho automático */
+    }
+}
+
+
+
+
+.seccion-back {
+    background-image: url('img/paisaje-nocturno-galaxia.jpg'); /* Ruta a tu imagen de fondo */
+    background-size: cover; /* Ajustar tamaño para cubrir completamente */
+    background-position: center;
+}
+
+.mi-titulo {
+    text-align: center;
+    padding: 10;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+/* Estilo básico para la tarjeta de personaje */
+.card {
+    width: 300px; /* Ancho de la tarjeta */
+    margin: 10px; /* Margen exterior */
+    border: 1px solid #ccc; /* Borde */
+    border-radius: 8px; /* Borde redondeado */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    transition: transform 0.3s ease; /* Transición para animación al hacer hover */
+    position: relative;
+    background-color: white;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Efecto de levantamiento al hacer hover */
+}
+
+.card-img-top {
+    width: 100%;
+    height: 200px; /* Altura de la imagen */
+    object-fit: cover; /* Ajuste de la imagen */
+    border-top-left-radius: 8px; /* Redondeo de la esquina superior izquierda */
+    border-top-right-radius: 8px; /* Redondeo de la esquina superior derecha */
+}
+
+.card-body {
+    padding: 10px;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.card-text {
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+}
+
+.sticker {
+    position: absolute; /* Posición absoluta para el sticker */
+    top: 10px;
+    right: 10px;
+    width: 100px; /* Tamaño del sticker */
+    height: 100px;
+    z-index: 1; /* Z-index para estar encima de la tarjeta */
+}
+
+.btn-fav {
+    cursor: pointer; /* Cambiar cursor al pasar sobre el botón */
+    align-items: center; /* Alinear elementos verticalmente */
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.liked {
+    background: yellow;
+}
+
+
+
+/* Estilos para la sección de contacto */
+.container {
+    max-width: 1200px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centrar el contenedor */
+    padding: 20px; /* Espaciado interno */
+}
+
+/* Estilos para el pie de página */
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0; /* Espaciado interno superior e inferior */
+    border-top: 1px solid #ccc; /* Borde superior */
+}
+
+.footer-section {
+    flex: 1; /* Ocupa todo el espacio disponible */
+}
+
+.footer-text {
+    color: #333; /* Color del texto */
+}
+
+/* Estilos para los íconos sociales */
+.social-icons {
+    list-style-type: none; /* Eliminar viñetas de la lista */
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.social-icons li {
+    margin-left: 10px; /* Espacio entre íconos */
+}
+
+.social-icons li:first-child {
+    margin-left: 0; /* Sin margen izquierdo para el primer ícono */
+}
+
+.social-icons a {
+    text-decoration: none; /* Sin subrayado enlaces */
+    color: #333; /* Color del texto */
+    display: block; /* Convertir enlace en bloque para ocupar espacio */
+    transition: opacity 0.3s ease; /* Transición suave de opacidad */
+}
+
+.social-icons a:hover {
+    opacity: 0.7; /* Opacidad reducida al pasar el mouse */
+}
+
